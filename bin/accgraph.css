@@ -1,0 +1,130 @@
+
+/*	
+	Dies ist die css-Datei, in der das Layout des Erreichbarkeits - Graphen beschrieben ist.
+*/
+
+/*
+	Style-Angabe fuer den Graphen
+*/
+
+graph {
+	padding: 40px;
+
+}
+
+/*
+	Style-Angabe fuer einen Knoten
+*/
+node {	
+	shape: box;
+	size: 50px, 18px;
+	fill-color: white;
+	text-background-color: black;
+	text-background-mode: rounded-box;
+	text-mode: normal;
+	text-offset: 0;
+	text-color: lightgrey;
+	text-size: 12;
+	stroke-mode: plain;
+	stroke-color: white;
+	stroke-width: 1px;
+	text-background-mode: plain;
+}
+/*
+	Style-Angaben fuer den Anfangsknoten
+*/
+node.startmarking {
+	text-background-color: darkgreen;
+	text-background-mode: rounded-box;
+	
+}
+/*
+	Style-Angaben fuer M und M' die durch den Unbeschraenktheitsalgorithmus ermittelt wurden
+*/
+node.invalidmarker {
+	text-background-color: #dd2860;
+	text-color: lightgrey;
+}
+
+node.invalidmarkerstroke {
+	text-background-color: #981818;
+	text-color: lightgrey;
+}
+
+/*
+	Style-Angaben fuer M welches auch Anfangsknoten ist.
+*/
+node.invalidmarkerandstartmarker{
+	text-background-color: #f462aa;
+	text-color: darkgreen;
+}
+
+
+
+/*
+	Style-Angaben fuer die aktuelle Markierung
+*/
+
+node.actualmarking{
+	text-background-color: #ed842d;
+	text-color: black;
+	
+}
+
+
+/*
+	Style-Angaben fuer die aktuelle Markierung die auch Anfangsknoten ist.
+*/
+node.actualmarkingandstartmarker{
+	text-background-color: darkgreen;
+	text-color: #ebd782;
+	
+}
+
+/*
+	Style-Angaben fuer M und M' falls sie auch die aktuelle Markierung sind. 
+*/
+node.invalidmarkerandactualmarker {
+	text-background-color: #dd2860;
+	text-color: #ea9c5c;
+}
+
+node.invalidmarkerstrokeandactualmarker {
+	text-background-color: #981818;
+	text-color: #ea9c5c;
+}
+
+
+
+/*
+	Style-Angabe fuer eine Kante
+*/
+edge {
+	text-background-color: white;
+	text-background-mode: plain;
+	fill-color: #2e2e2e;
+	text-color: black;
+	arrow-shape: arrow;
+	arrow-size: 9px, 6px;
+	text-size: 10;
+}
+
+
+/*
+	Style-Angabe fuer eine Kante auf dem Pfad nach M'
+*/
+edge.in_invalid_path {
+	fill-color : #c12e2e;
+	stroke-width : 4px; 
+	arrow-size: 10px, 7px;
+
+}
+
+/*
+	Style-Angabe fuer eine Kante falls sie die letzte manuell abgefahrene ist.
+*/
+edge.last_activated_edge {
+	fill-color : #cd7e34;
+	shadow-color: #cd7e34;
+	shadow-width: 4px;
+}
