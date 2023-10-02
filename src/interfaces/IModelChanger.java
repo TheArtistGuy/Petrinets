@@ -14,6 +14,8 @@ public interface IModelChanger {
 	 * 
 	 * @param model das übergebene DataModel
 	 */
-	public void changeDataModelTo(DataModel model);
+	void changeDataModelTo(DataModel model);
+
+	IModel getCurrentModel();
 
 }

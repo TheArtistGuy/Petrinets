@@ -3,9 +3,11 @@ package controller.filemanager;
 import java.io.File;
 
 import exceptions.InvalidEdgeException;
+import interfaces.IModel;
 import interfaces.IModelChanger;
 import interfaces.ITextWindow;
 import model.DataModel;
+import controller.filemanager.woped.PNMLWopedWriter;
 
 /**
  * Der FileHandler ist der Handler aller Übersetzungsprozesse von PNML Dateien
@@ -68,4 +70,42 @@ public class FileHandler {
 		mfa.run();
 	}
 
+	/**
+	 * Speichert das Aktuelle Petrinetz in der angegebenen Datei
+	 * @param file die Datei
+	 */
+	public void save (File file) {
+		PNMLWopedWriter writer = new PNMLWopedWriter(file);
+		IModel model = this.modelChanger.getCurrentModel();
+		writer.startXMLDocument();
+		for (var transition : model.getTransitionList()){
+			writer.addTransition(
+					transition.getId(),
+					transition.getLabel(),
+					String.valueOf(transition.getPosition().x),
+					String.valueOf(transition.getPosition().y)
+			);
+		}
+		for (var field : model.getFieldList()){
+			writer.addPlace(
+					field.getId(),
+					field.getLabel(),
+					String.valueOf(field.getPosition().x),
+					String.valueOf(field.getPosition().y),
+					String.valueOf(field.getTokens())
+			);
+		}
+		for (var arc : model.getEdgeList()){
+			writer.addArc(
+					arc.getId(),
+					arc.getFrom().getId(),
+					arc.getTo().getId()
+			);
+		}
+		writer.finishXMLDocument();
+	}
+
+	public void resetGraph() {
+		this.modelChanger.changeDataModelTo(new DataModel());
+	}
 }

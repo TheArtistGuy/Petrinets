@@ -1,4 +1,4 @@
 /**
- * Das Package <tt>interfaces</tt> fasst die Interfaces des Programms zusammen.
+ * Das Package interfaces fasst die Interfaces des Programms zusammen.
  */
 package interfaces;

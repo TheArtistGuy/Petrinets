@@ -1,4 +1,4 @@
 /**
- * Die Klassen im Package <tt>model</tt> realisieren das Daten-Modell des Programms.
+ * Die Klassen im Package model realisieren das Daten-Modell des Programms.
  */
 package model;

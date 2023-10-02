@@ -1,8 +1,21 @@
 # Petrinets
 
-Ein Programm zur Darstellung von Petrinetzen.
+A Programm to Create, Edit and Analyse Petrinets.
 
-Dieses Programm entstand im Zuge des Programmierpraktikums in meinem Studium. Der Zeitpunkt des 1. Programmierpraktikums ist didaktisch so gewählt, das noch kein Software Engineering unterrichtet wurde. Entsprechend ist der Aufbau des Codes verbesserungswürdig.
+This is a university project from the wintersemester 2020/2021.
+The timing of the first programming internship is didactically chosen so that no software engineering has yet been taught, at this time. 
+Accordingly, the structure of the code needs to be improved.
+
+It uses Graph Stream : https://graphstream-project.org for the visualisation. It is included in the dependency folder. 
+
+The language of the program is german. There is no english localization yet.
 
 
-Das Programm enthält eine Abhängigkeit (PMLWopedParser) welches nicht von mir programmiert wurde und für das die Rechte fraglich sind. Aus diesem Grunde wurde darauf verzichtet dieses Modul zu inkludieren. Zur neukompilierung ein entsprechendes Modul neu geschrieben werden, um Petrinetze speichern und laden zu können.
+To build and edit Petrinets switch to:  Modus => Bearbeiten-Modus
+
+To analyse Petrinets switch to : Modus => Ansichts-Modus
+
+
+![Screenshot](.\resources\documentation_images\screenshot.png)
+
+ 

@@ -50,7 +50,7 @@ public class PetrinetMainFrame extends JFrame {
 	private ToolbarSwitch toolbarSwitch;
 
 	public PetrinetMainFrame() {
-		super("Kai Mueller - 3126463");
+		super("Petrinets");
 
 		// Renderer mit Unterstützung für Multigraphen und aller CSS Attribute
 		// verwenden.
@@ -125,7 +125,7 @@ public class PetrinetMainFrame extends JFrame {
 		BuildModeToolbar buildToolbar = new BuildModeToolbar(this);
 		buildToolbar.addBuilderAsListener(builder);
 
-		// ToolbarSwitch für beide regelt welche Toolbar im Frame angezeigt wird.
+		// ToolbarSwitch für beide, regelt welche Toolbar im Frame angezeigt wird.
 		this.toolbarSwitch = new ToolbarSwitch(this, toolbar, buildToolbar);
 	}
 

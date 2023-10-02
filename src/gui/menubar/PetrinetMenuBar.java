@@ -10,6 +10,7 @@ import javax.swing.JFrame;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
+import javax.swing.filechooser.FileNameExtensionFilter;
 
 import controller.Controller;
 import controller.ModeManagerNode;
@@ -29,12 +30,12 @@ public class PetrinetMenuBar extends JMenuBar {
 	 */
 	private static final long serialVersionUID = 1L;
 
-	private OpenPNMLDialog openDialog;
-	private FileHandler fileHandler;
-	private SystemExitDialog closingFrame;
+	private final OpenPNMLDialog openDialog;
+	private final FileHandler fileHandler;
+	private final SystemExitDialog closingFrame;
 	private File lastFileOpened;
-	private JFrame frameToSetPositionOfDialogs;
-	private ModeManagerNode managerNode;
+	private final JFrame frameToSetPositionOfDialogs;
+	private final ModeManagerNode managerNode;
 	private final Color BACKGROUNDCOLOR = new Color(30, 30, 30);
 	private final Color FOREGROUNDCOLOR = new Color(230, 230, 230);
 
@@ -67,13 +68,28 @@ public class PetrinetMenuBar extends JMenuBar {
 	private JMenu initialiseDataMenu() {
 		JMenu datMenu = new JMenu("Datei");
 		datMenu.setForeground(FOREGROUNDCOLOR);
+		datMenu.add(initialiseNew());
 		datMenu.add(initialiseOpenFile());
 		datMenu.add(initializeLoadAgain());
 		datMenu.add(initializeAnalyseMultipleFiles());
+		datMenu.add(initialiseSafeFile());
 		datMenu.add(initialiseCloseProgram());
 		return datMenu;
 	}
-	
+
+	private JMenuItem initialiseNew() {
+		JMenuItem newGraph = new JMenuItem("Neuer Graph");
+
+		newGraph.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				fileHandler.resetGraph();
+			}
+		});
+		return newGraph;
+	}
+
+
 	private JMenu initialiseModeMenu() {
 		JMenu modeMenu = new JMenu("Modus");
 		modeMenu.setForeground(FOREGROUNDCOLOR);
@@ -172,5 +188,36 @@ public class PetrinetMenuBar extends JMenuBar {
 			}
 		});
 		return datOpen;
+	}
+
+	private JMenuItem initialiseSafeFile() {
+		JMenuItem datSave = new JMenuItem("Speichern als");
+		datSave.addActionListener(new ActionListener() {
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			openDialog.setMultiSelectionEnabled(false);
+			File file = null;
+			int returnVal = openDialog.showSaveDialog(frameToSetPositionOfDialogs);
+			if (returnVal == JFileChooser.APPROVE_OPTION) {
+				file = openDialog.getSelectedFile();
+				FileNameExtensionFilter fileFilter = openDialog.getFileNameExtensionFilter();
+				if (! fileFilter.accept(file)) {
+					// if the filter doesn't accept the filename, that must be because it doesn't have the correct extension
+					// so change the extension to the first extension offered by the filter.
+					String extension = fileFilter.getExtensions()[0];
+
+					String newName = file.getName() + "." + extension;
+					file = new File(file.getParent(), newName);
+
+				}
+
+
+				lastFileOpened = file;
+				openDialog.setCurrentDirectory(file);
+				fileHandler.save(file);
+			}
+		}
+	});
+	return datSave;
 	}
 }

@@ -18,6 +18,7 @@ class OpenPNMLDialog extends JFileChooser {
 	 */
 	private static final long serialVersionUID = 1L;
 
+	private static final FileNameExtensionFilter extensionFilter = new FileNameExtensionFilter("Petrinet File", "pnml");
 	
 	/**
 	 * Konstruktor
@@ -25,9 +26,14 @@ class OpenPNMLDialog extends JFileChooser {
 	protected OpenPNMLDialog() {
 		setCurrentDirectory(new File("../ProPra-WS20-Basis/Beispiele/"));
 		setFileSelectionMode(FILES_AND_DIRECTORIES);
-		addChoosableFileFilter(new FileNameExtensionFilter("Petrinet File", "pnml"));
+		addChoosableFileFilter(extensionFilter);
 		setAcceptAllFileFilterUsed(false);
 		setVisible(true);
+
+	}
+
+	protected FileNameExtensionFilter getFileNameExtensionFilter(){
+		return extensionFilter;
 	}
 
 }

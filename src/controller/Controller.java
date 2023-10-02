@@ -123,6 +123,11 @@ public class Controller implements IModelChanger, IMouseInputListener, IPetrinet
 	}
 
 	@Override
+	public IModel getCurrentModel() {
+		return this.model;
+	}
+
+	@Override
 	public void decraseMarksOfSelectedFieldByOne() {
 		if (model.getSelectedNode() != null && model.getSelectedNode().getClass().isInstance(new PField(""))) {
 			((PField) model.getSelectedNode()).decreaseMarksByOne();

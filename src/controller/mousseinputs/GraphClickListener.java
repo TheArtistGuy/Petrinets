@@ -1,8 +1,7 @@
 package controller.mousseinputs;
 
-import org.graphstream.ui.view.ViewerListener;
-
 import interfaces.IMouseInputListener;
+import org.graphstream.ui.view.ViewerListener;
 
 /**
  * Ein Click Listener um Maus-Eingaben aus dem Petrinetz dargestellt mit

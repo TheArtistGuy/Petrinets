@@ -1,5 +1,5 @@
 /**
- * Das Package <tt>gui.views.debug</tt> enthält Klassen zum Debuggen des Programms.
+ * Das Package gui.views.debug enthält Klassen zum Debuggen des Programms.
  */
 
 package gui.views.debug;

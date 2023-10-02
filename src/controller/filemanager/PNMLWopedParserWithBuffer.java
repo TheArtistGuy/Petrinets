@@ -8,7 +8,7 @@ import java.util.List;
 import exceptions.InvalidEdgeException;
 import model.DataModel;
 import model.elements.*;
-import propra.pnml.PNMLWopedParser;
+import controller.filemanager.woped.PNMLWopedParser;
 
 /**
  * Diese Klasse liest PNML-Datein und filtert die relevanten Informationen

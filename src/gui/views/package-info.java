@@ -1,5 +1,5 @@
 /**
- * Die Klassen im Package <tt>gui.views</tt> realisieren die Anzeige des
- * Petrinetzes und des Erreichbarkeitsgraphen.
+ * Die Klassen im Package gui.views realisieren die Anzeige des
+ * Petrinetzes und des Erreichbarkeitsgrafen.
  */
 package gui.views;
