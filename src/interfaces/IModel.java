@@ -17,21 +17,21 @@ public interface IModel {
     /**
      * Setzt den Ausgangs Zustand auf die aktuelle Markierung
      */
-    public void setInitialMarkingToActualState();
+    void setInitialMarkingToActualState();
 
     /**
      * Getter Methode für den Erreichbarkeitsgraphen des DataModels
      * 
      * @return der Erreichbarkeitsgraph
      */
-    public AccessabilityGraph getAccessabilityGraph();
+    AccessabilityGraph getAccessabilityGraph();
 
     /**
      * Getter Methode für den ausgewählten Knoten des Petrinetzes
      * 
      * @return der ausgewählte Knoten / null wenn keiner gewählt
      */
-    public PLabeledNode getSelectedNode();
+    PLabeledNode getSelectedNode();
 
     /**
      * Übergibt die Anfangsmarkierung
@@ -39,61 +39,61 @@ public interface IModel {
      * @return die Anfangsmarkierung
      */
 
-    public PMarking getInitialMarking();
+    PMarking getInitialMarking();
 
     /**
      * Fügt eine Stelle der Liste der Stellen hinzu
      * 
      * @param f die hinzuzufügende Stelle
      */
-    public void addField(PField f);
+    void addField(PField f);
 
     /**
      * Fügt eine Transition der Liste der Transitionen hinzu
      * 
      * @param t die hinzuzufügende Transition
      */
-    public void addTransition(PTransition t);
+    void addTransition(PTransition t);
 
     /**
      * Getter Methode für die Liste der Transitionen
      * 
      * @return die Liste der Transitionen
      */
-    public List<PTransition> getTransitionList();
+    List<PTransition> getTransitionList();
 
     /**
      * Getter Methode für die Liste der Felder
      * 
      * @return die Liste der Felder
      */
-    public List<PField> getFieldList();
+    List<PField> getFieldList();
 
     /**
      * Getter Methode für die Liste der Kanten
      * 
      * @return die Liste
      */
-    public List<PEdge> getEdgeList();
+    List<PEdge> getEdgeList();
 
     /**
      * Setter Methode für den Selektierten Knoten
      * 
      * @param node der Knoten
      */
-    public void setSelectedNode(PLabeledNode node);
+    void setSelectedNode(PLabeledNode node);
 
     /**
      * Setzt den Zusatnd aller Stellen auf den Zustand der übergebenen Markierung
      * 
      * @param m Die Markierung
      */
-    public void setFieldsToMarking(PMarking m);
+    void setFieldsToMarking(PMarking m);
 
     /**
      * Setzt die Marken aller Stellen auf den Zustand der Start-Markierung zurück
      */
-    public void resetFieldsToInitialMarking();
+    void resetFieldsToInitialMarking();
 
     /**
      * Erschafft eine neue Kante, fügt sie der Liste hinzu und verlinkt sie mit
@@ -119,14 +119,14 @@ public interface IModel {
      * 
      * @return die Liste der Kanten
      */
-    public List<PAccEdge> getListOfEdgesOfMarkings();
+    List<PAccEdge> getListOfEdgesOfMarkings();
 
     /**
      * Übergibt die Liste der Markierungen aus dem Erreichbarkeitsgraphen
      * 
      * @return die Liste der Markierungen
      */
-    public List<PMarking> getListOfMarkingsInGraph();
+    List<PMarking> getListOfMarkingsInGraph();
 
     /**
      * Übergibt die MetaDaten des Erreichbarkeitsgraphen. diese bestehen aus M, M#
@@ -135,6 +135,6 @@ public interface IModel {
      * 
      * @return Die MetaDaten des ErreichbarkeitsGraphen
      */
-    public AccGraphMetaData getAccessabilityGraphMetaData();
+    AccGraphMetaData getAccessabilityGraphMetaData();
 
 }

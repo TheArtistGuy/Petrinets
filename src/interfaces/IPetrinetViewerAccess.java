@@ -18,26 +18,26 @@ public interface IPetrinetViewerAccess {
 	 * 
 	 * @return die Liste der Felder
 	 */
-	public List<PField> getFieldList();
+    List<PField> getFieldList();
 
 	/**
 	 * Getter Methode für die Liste der Transitionen des Petrinetzes
 	 * 
 	 * @return die Liste der Transitionen
 	 */
-	public List<PTransition> getTransitionList();
+    List<PTransition> getTransitionList();
 
 	/**
 	 * Getter Methode für die Liste der Kanten des Petrinetzes
 	 * 
 	 * @return die Liste der Kanten
 	 */
-	public List<PEdge> getEdgeList();
+    List<PEdge> getEdgeList();
 
 	/**
 	 * Getter Methode für den ausgewählten Knoten des Petrinetzes
 	 * 
 	 * @return der ausgewählte Knoten / null wenn keiner gewählt
 	 */
-	public PLabeledNode getSelectedNode();
+    PLabeledNode getSelectedNode();
 }

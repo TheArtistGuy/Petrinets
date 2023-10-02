@@ -10,7 +10,7 @@ import org.graphstream.ui.view.ViewerListener;
  */
 
 public class GraphClickListener implements ViewerListener {
-	private IMouseInputListener listener;
+	private final IMouseInputListener listener;
 
 	/**
 	 * Konstruktor

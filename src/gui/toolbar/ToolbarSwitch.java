@@ -15,9 +15,9 @@ import interfaces.IModeManager;
  */
 
 public class ToolbarSwitch implements IModeManager {
-	private JFrame superFrame;
-	private JToolBar viewModeToolbar;
-	private JToolBar buildModeToolbar;
+	private final JFrame superFrame;
+	private final JToolBar viewModeToolbar;
+	private final JToolBar buildModeToolbar;
 	// Kontrollvariable sollten weitere Modi hinzugefügt werden kann diese durch ein
 	// int oder enum ersetzt werden.
 	private boolean isInViewMode;

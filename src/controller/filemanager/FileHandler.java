@@ -18,8 +18,8 @@ import controller.filemanager.woped.PNMLWopedWriter;
  */
 
 public class FileHandler {
-	private IModelChanger modelChanger;
-	private ITextWindow txtWindow;
+	private final IModelChanger modelChanger;
+	private final ITextWindow txtWindow;
 
 	/**
 	 * Konstruktor

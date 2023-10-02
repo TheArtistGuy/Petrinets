@@ -1,5 +1,5 @@
 /**
- * Die Klassen im Package <tt>gui</tt> realisieren das Grafische User Interface
+ * Die Klassen im Package gui realisieren das Grafische User Interface
  * des Programmes
  */
 package gui;

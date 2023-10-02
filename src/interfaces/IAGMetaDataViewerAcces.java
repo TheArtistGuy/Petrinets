@@ -20,7 +20,7 @@ public interface IAGMetaDataViewerAcces {
 	 * @return die Markierung M'
 	 */
 
-	public String getInvalidMStrokeId();
+    String getInvalidMStrokeId();
 	
 	/**
 	 * Getter Methode für die Markierung M, das durch die
@@ -28,7 +28,7 @@ public interface IAGMetaDataViewerAcces {
 	 * 
 	 * @return die Markierung M
 	 */
-	public String getInvalidMId();
+    String getInvalidMId();
 	
 	
 	/**
@@ -37,7 +37,7 @@ public interface IAGMetaDataViewerAcces {
 	 * 
 	 * @return edge die hinzuzufügende Kante
 	 */
-	public List<PAccEdge> getInvalidPath();
+    List<PAccEdge> getInvalidPath();
 	
 	
 	/**
@@ -46,5 +46,5 @@ public interface IAGMetaDataViewerAcces {
 	 * 
 	 * @return die Id der Kante
 	 */
-	public String getLastAddedEdgeId();
+    String getLastAddedEdgeId();
 }

@@ -27,8 +27,8 @@ class PetrinetGraphPanel extends JPanel {
 	 * Default Serial Version Id
 	 */
 	private static final long serialVersionUID = 1L;
-	private MouseInputSwitch mousseInputSwitch;
-	private ViewPanel viewPanel;
+	private final MouseInputSwitch mousseInputSwitch;
+	private final ViewPanel viewPanel;
 
 	/**
 	 * Konstruktor 

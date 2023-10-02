@@ -19,11 +19,11 @@ import model.elements.*;
  *
  */
 public class DataModel implements IAGViewerAccess, IPetrinetViewerAccess, IModel {
-	private List<PField> fieldList;
-	private List<PTransition> transitionList;
-	private List<PEdge> edgeList;
+	private final List<PField> fieldList;
+	private final List<PTransition> transitionList;
+	private final List<PEdge> edgeList;
 	private PMarking initialMarking;
-	private AccessabilityGraph accessabilityGraph;
+	private final AccessabilityGraph accessabilityGraph;
 	private PLabeledNode selectedNode;
 
 	/**

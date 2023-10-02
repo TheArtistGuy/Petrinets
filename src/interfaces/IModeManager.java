@@ -9,10 +9,10 @@ public interface IModeManager {
 	/**
 	 * Ändere den Modus auf den "Bearbeitungsmodus"
 	 */
-	public void changeToBuildMode();
+    void changeToBuildMode();
 
 	/**
 	 * Ändere den Modus auf den "Beobachtungsmodus"
 	 */
-	public void changeToViewMode();
+    void changeToViewMode();
 }

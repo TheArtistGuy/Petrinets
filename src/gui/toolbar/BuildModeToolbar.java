@@ -23,10 +23,10 @@ public class BuildModeToolbar extends JToolBar {
 	 * Default Serial Version ID
 	 */
 	private static final long serialVersionUID = 1L;
-	private List<IPBuilderToolbarListener> builders;
-	private JFrame superFrame;
+	private final List<IPBuilderToolbarListener> builders;
+	private final JFrame superFrame;
 
-	private static Color TOOLBARCOLOR = new Color(75, 75, 75);
+	private static final Color TOOLBARCOLOR = new Color(75, 75, 75);
 
 	private final static URL BUTTON_MINUS_FILE = PetrinetToolbar.class.getResource("/buttonimages/button_minus.png");
 	private final static URL BUTTON_PLUS_FILE = PetrinetToolbar.class.getResource("/buttonimages/button_plus.png");
@@ -121,8 +121,7 @@ public class BuildModeToolbar extends JToolBar {
 			public void actionPerformed(ActionEvent e) {
 				for (IPBuilderToolbarListener builder : builders) {
 					builder.changeModeTo(EBuilderModes.ADD_TRANSITION_MODE);
-					;
-				}
+                }
 			}
 		});
 		this.add(addTransitionButton);
@@ -138,8 +137,7 @@ public class BuildModeToolbar extends JToolBar {
 			public void actionPerformed(ActionEvent e) {
 				for (IPBuilderToolbarListener builder : builders) {
 					builder.changeModeTo(EBuilderModes.ADD_FIELD_MODE);
-					;
-				}
+                }
 			}
 		});
 		this.add(addFieldButton);
@@ -154,8 +152,7 @@ public class BuildModeToolbar extends JToolBar {
 			public void actionPerformed(ActionEvent e) {
 				for (IPBuilderToolbarListener builder : builders) {
 					builder.changeModeTo(EBuilderModes.SELECT_MODE);
-					;
-				}
+                }
 			}
 		});
 		this.add(selectModeButton);

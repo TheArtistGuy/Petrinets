@@ -1,5 +1,5 @@
 /**
- * Die Klassen im Package <tt>controller</tt> realisieren die Steuerung des Programms.
+ * Die Klassen im Package controller realisieren die Steuerung des Programms.
  *
  */
 package controller;

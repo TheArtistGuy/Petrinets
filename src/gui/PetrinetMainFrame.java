@@ -44,7 +44,7 @@ public class PetrinetMainFrame extends JFrame {
 	private JSplitPane horiziontalSplit;
 
 	private Controller controller;
-	private DataModel model;
+	private final DataModel model;
 	private PetrinetBuilder builder;
 	private ModeManagerNode modeManagerNode;
 	private ToolbarSwitch toolbarSwitch;

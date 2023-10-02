@@ -1,5 +1,5 @@
 /**
- * Die Klassen im Package <tt>controller.mousseinputs</tt> sind zuständig für
+ * Die Klassen im Package controller.mousseinputs sind zuständig für
  * Eingaben der Maus und das Schalten derselben.
  */
 

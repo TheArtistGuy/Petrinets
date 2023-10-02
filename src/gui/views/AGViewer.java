@@ -19,7 +19,7 @@ import model.elements.*;
 public class AGViewer extends MultiGraph implements IViewer {
 
 	/** URL-Angabe zur css-Datei, in der das Layout des Graphen angegeben ist. */
-	private static String CSS_FILE = "url(" + PetrinetGraph.class.getResource("/accgraph.css") + ")";
+	private static final String CSS_FILE = "url(" + PetrinetGraph.class.getResource("/accgraph.css") + ")";
 
 	private IAGViewerAccess accessabilityGraph;
 

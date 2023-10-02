@@ -12,7 +12,7 @@ import interfaces.IPBuilderMouseAdapter;
  */
 
 public class ToggleableMouseAdapterBuildMode extends ToggleableMouseAdapter {
-	private IPBuilderMouseAdapter builder;
+	private final IPBuilderMouseAdapter builder;
 
 	/**
 	 * Konstruktor

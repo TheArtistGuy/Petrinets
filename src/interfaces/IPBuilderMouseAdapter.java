@@ -10,5 +10,5 @@ public interface IPBuilderMouseAdapter{
 	 * @param x Koordinate x
 	 * @param y Koordinate y
 	 */
-	public void ClickOccurred(int x, int y);
+    void ClickOccurred(int x, int y);
 }

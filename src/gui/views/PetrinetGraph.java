@@ -18,7 +18,7 @@ import model.elements.*;
 public class PetrinetGraph extends MultiGraph implements IViewer {
 
 	/** URL-Angabe zur css-Datei, in der das Layout des Graphen angegeben ist. */
-	private static String CSS_FILE = "url(" + PetrinetGraph.class.getResource("/petrinetgraph.css") + ")";
+	private static final String CSS_FILE = "url(" + PetrinetGraph.class.getResource("/petrinetgraph.css") + ")";
 
 	private IPetrinetViewerAccess petrinet;
 

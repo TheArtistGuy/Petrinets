@@ -22,9 +22,9 @@ class PetrinetToolbarButton extends JButton {
 	 */
 	private static final long serialVersionUID = 1L;
 
-	private static Color TOOLBARCOLOR = new Color(75, 75, 75);
-	private static Color TEXTCOLOR = new Color(190, 190, 190);
-	private static Color BORDERCOLOR = new Color(100, 100, 100);
+	private static final Color TOOLBARCOLOR = new Color(75, 75, 75);
+	private static final Color TEXTCOLOR = new Color(190, 190, 190);
+	private static final Color BORDERCOLOR = new Color(100, 100, 100);
 
 	/**
 	 * Konstruktor

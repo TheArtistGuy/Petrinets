@@ -53,7 +53,7 @@ public final class PNMLWopedWriter {
 	/**
 	 * Dies ist eine Referenz zum Java Datei Objekt.
 	 */
-	private File pnmlDatei;
+	private final File pnmlDatei;
 
 	/**
 	 * Dies ist eine Referenz zum XML Writer. Diese Referenz wird durch die

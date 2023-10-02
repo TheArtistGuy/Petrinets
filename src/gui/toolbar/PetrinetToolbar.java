@@ -23,12 +23,12 @@ public class PetrinetToolbar extends JToolBar {
 	 * default serialVersionUID
 	 */
 	private static final long serialVersionUID = 1L;
-	private List<IPetrinetToolBarListener> listeners;
-	private NotificationWindow notificationWindow;
+	private final List<IPetrinetToolBarListener> listeners;
+	private final NotificationWindow notificationWindow;
 	// Der übergeordnete Frame
-	private JFrame superFrame;
+	private final JFrame superFrame;
 
-	private static Color TOOLBARCOLOR = new Color(75, 75, 75);
+	private final static Color TOOLBARCOLOR = new Color(75, 75, 75);
 
 	private final static URL BUTTON_MINUS_FILE = PetrinetToolbar.class.getResource("/buttonimages/button_minus.png");
 	private final static URL BUTTON_PLUS_FILE = PetrinetToolbar.class.getResource("/buttonimages/button_plus.png");

@@ -9,7 +9,7 @@ package model.elements;
 
 public class PAccEdge extends PEdge {
 
-	private PTransition transition;
+	private final PTransition transition;
 
 	/**
 	 * Konstruktor

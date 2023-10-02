@@ -1,11 +1,8 @@
 package controller.filemanager;
 
 import java.io.File;
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Locale;
-import java.util.Formatter;
+import java.util.*;
+
 import controller.Controller;
 import exceptions.InvalidEdgeException;
 import interfaces.ITextWindow;
@@ -21,8 +18,8 @@ import model.DataModel;
  *
  */
 class MultipleFileAnalyser implements Runnable {
-    private List<File> fileList;
-    private ITextWindow txtWindow;
+    private final List<File> fileList;
+    private final ITextWindow txtWindow;
 
     /**
      * Konstruktor
@@ -43,9 +40,7 @@ class MultipleFileAnalyser implements Runnable {
 
     private ArrayList<File> createListfromArray(File[] fileArray) {
         ArrayList<File> list = new ArrayList<File>(fileArray.length);
-        for (File file : fileArray) {
-            list.add(file);
-        }
+        Collections.addAll(list, fileArray);
         return list;
     }
 

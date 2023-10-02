@@ -13,27 +13,27 @@ public interface IPBuilderToolbarListener {
 	 * 
 	 * @param mode der Modus
 	 */
-	public void changeModeTo(EBuilderModes mode);
+    void changeModeTo(EBuilderModes mode);
 
 	/**
 	 * Setzt das Label des angewählten Knotens auf des übergebene Label
 	 * 
 	 * @param label das Label
 	 */
-	public void setLabelOfSelectedGraphElementTo(String label);
+    void setLabelOfSelectedGraphElementTo(String label);
 
 	/**
 	 * vermindert die Marken auf der gewählten Stelle um 1
 	 */
-	public void decraseMarksOfSelectedFieldByOne();
+    void decraseMarksOfSelectedFieldByOne();
 
 	/**
 	 * erhöht die Marken auf der gewählten Stelle um 1
 	 */
-	public void increaseMarksOfSelectedFieldByOne();
+    void increaseMarksOfSelectedFieldByOne();
 
 	/**
 	 * löscht den gewählten Knoten
 	 */
-	public void deleteSelectedNode();
+    void deleteSelectedNode();
 }

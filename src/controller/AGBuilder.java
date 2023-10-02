@@ -14,7 +14,7 @@ import model.elements.*;
 
 class AGBuilder {
 
-	private IModel model;
+	private final IModel model;
 
 	/**
 	 * Konstruktor

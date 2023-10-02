@@ -18,7 +18,7 @@ public interface IAGViewerAccess {
 	 * @return die Liste der Markierungen
 	 */
 
-	public List<PMarking> getListOfMarkingsInGraph();
+    List<PMarking> getListOfMarkingsInGraph();
 
 	/**
 	 * Übergibt die Liste der Kanten aus dem Erreichbarkeitsgraphen
@@ -26,14 +26,14 @@ public interface IAGViewerAccess {
 	 * @return die Liste der Kanten
 	 */
 
-	public List<PAccEdge> getListOfEdgesOfMarkings();
+    List<PAccEdge> getListOfEdgesOfMarkings();
 
 	/**
 	 * Übergibt die Anfangsmarkierung des Graphen
 	 * 
 	 * @return die Anfangsmarkierung
 	 */
-	public PMarking getInitialMarking();
+    PMarking getInitialMarking();
 
 	/**
 	 * Übergibt die Id der Makierung die den aktuellen Zustand des Petrinetzes
@@ -41,7 +41,7 @@ public interface IAGViewerAccess {
 	 * 
 	 * @return die Id der Markierung
 	 */
-	public String getCurrentMarkingId();
+    String getCurrentMarkingId();
 
 	/**
 	 * Gibt Lesezugriff auf die MetaDaten des Erreichbarkeitsgraphen. diese bestehen
@@ -50,5 +50,5 @@ public interface IAGViewerAccess {
 	 * 
 	 * @return Die MetaDaten des ErreichbarkeitsGraphen
 	 */
-	public IAGMetaDataViewerAcces getMetaDataViewerAccess();
+    IAGMetaDataViewerAcces getMetaDataViewerAccess();
 }

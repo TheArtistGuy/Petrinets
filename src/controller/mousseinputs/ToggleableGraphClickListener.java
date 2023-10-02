@@ -12,7 +12,7 @@ import org.graphstream.ui.view.ViewerListener;
  */
 public class ToggleableGraphClickListener implements ViewerListener {
 	private boolean isActive;
-	private IMouseInputListener listener;
+	private final IMouseInputListener listener;
 
 	/**
 	 * Konstruktor

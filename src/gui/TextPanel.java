@@ -19,7 +19,7 @@ public class TextPanel extends JScrollPane implements ITextWindow {
 	 * default SerialVersionUID
 	 */
 	private static final long serialVersionUID = 1L;
-	private JTextArea txtField;
+	private final JTextArea txtField;
 	private final Color BACKGROUNDCOLOR = new Color (220,220,220);
 
 	/**

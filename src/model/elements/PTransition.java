@@ -12,8 +12,8 @@ import java.util.List;
 
 public class PTransition extends PLabeledNode {
 
-	private List<PEdge> incomingEdges;
-	private List<PEdge> outgoingEdges;
+	private final List<PEdge> incomingEdges;
+	private final List<PEdge> outgoingEdges;
 
 	/**
 	 * Konstruktor

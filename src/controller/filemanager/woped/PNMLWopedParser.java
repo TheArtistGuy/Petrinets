@@ -49,7 +49,7 @@ public class PNMLWopedParser {
 	/**
 	 * Dies ist eine Referenz zum Java Datei Objekt.
 	 */
-	private File pnmlDatei;
+	private final File pnmlDatei;
 
 	/**
 	 * Dies ist eine Referenz zum XML Parser. Diese Referenz wird durch die
@@ -174,21 +174,21 @@ public class PNMLWopedParser {
 	 */
 	private void handleStartEvent(final XMLEvent event) {
 		StartElement element = event.asStartElement();
-		if (element.getName().toString().toLowerCase().equals("transition")) {
+		if (element.getName().toString().equalsIgnoreCase("transition")) {
 			handleTransition(element);
-		} else if (element.getName().toString().toLowerCase().equals("place")) {
+		} else if (element.getName().toString().equalsIgnoreCase("place")) {
 			handlePlace(element);
-		} else if (element.getName().toString().toLowerCase().equals("arc")) {
+		} else if (element.getName().toString().equalsIgnoreCase("arc")) {
 			handleArc(element);
-		} else if (element.getName().toString().toLowerCase().equals("name")) {
+		} else if (element.getName().toString().equalsIgnoreCase("name")) {
 			isName = true;
-		} else if (element.getName().toString().toLowerCase()
-				.equals("position")) {
+		} else if (element.getName().toString()
+				.equalsIgnoreCase("position")) {
 			handlePosition(element);
-		} else if (element.getName().toString().toLowerCase()
-				.equals("initialmarking")) {
+		} else if (element.getName().toString()
+				.equalsIgnoreCase("initialmarking")) {
 			isInitialMarking = true;
-		} else if (element.getName().toString().toLowerCase().equals("text")) {
+		} else if (element.getName().toString().equalsIgnoreCase("text")) {
 			isText = true;
 		}
 	}
@@ -220,9 +220,9 @@ public class PNMLWopedParser {
 		Iterator<?> attributes = element.getAttributes();
 		while (attributes.hasNext()) {
 			Attribute attr = (Attribute) attributes.next();
-			if (attr.getName().toString().toLowerCase().equals("x")) {
+			if (attr.getName().toString().equalsIgnoreCase("x")) {
 				x = attr.getValue();
-			} else if (attr.getName().toString().toLowerCase().equals("y")) {
+			} else if (attr.getName().toString().equalsIgnoreCase("y")) {
 				y = attr.getValue();
 			}
 		}
@@ -253,7 +253,7 @@ public class PNMLWopedParser {
 		Iterator<?> attributes = element.getAttributes();
 		while (attributes.hasNext()) {
 			Attribute attr = (Attribute) attributes.next();
-			if (attr.getName().toString().toLowerCase().equals("id")) {
+			if (attr.getName().toString().equalsIgnoreCase("id")) {
 				transitionId = attr.getValue();
 				break;
 			}
@@ -278,7 +278,7 @@ public class PNMLWopedParser {
 		Iterator<?> attributes = element.getAttributes();
 		while (attributes.hasNext()) {
 			Attribute attr = (Attribute) attributes.next();
-			if (attr.getName().toString().toLowerCase().equals("id")) {
+			if (attr.getName().toString().equalsIgnoreCase("id")) {
 				placeId = attr.getValue();
 				break;
 			}
@@ -305,11 +305,11 @@ public class PNMLWopedParser {
 		Iterator<?> attributes = element.getAttributes();
 		while (attributes.hasNext()) {
 			Attribute attr = (Attribute) attributes.next();
-			if (attr.getName().toString().toLowerCase().equals("id")) {
+			if (attr.getName().toString().equalsIgnoreCase("id")) {
 				arcId = attr.getValue();
-			} else if (attr.getName().toString().toLowerCase().equals("source")) {
+			} else if (attr.getName().toString().equalsIgnoreCase("source")) {
 				source = attr.getValue();
-			} else if (attr.getName().toString().toLowerCase().equals("target")) {
+			} else if (attr.getName().toString().equalsIgnoreCase("target")) {
 				target = attr.getValue();
 			}
 		}

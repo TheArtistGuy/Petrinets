@@ -1,4 +1,4 @@
 /**
- * Die Klassen im Package <tt>gui.menubar</tt> realisieren die Menubar des Programms
+ * Die Klassen im Package gui.menubar realisieren die Menubar des Programms
  */
 package gui.menubar;

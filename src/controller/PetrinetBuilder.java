@@ -74,9 +74,10 @@ public class PetrinetBuilder extends Controller implements IPBuilderToolbarListe
 			String transitionId = ("t" + counter);
 			boolean hasDoublette = false;
 			for (PTransition t : model.getTransitionList()) {
-				if (t.getId().equals(transitionId)) {
-					hasDoublette = true;
-				}
+                if (t.getId().equals(transitionId)) {
+                    hasDoublette = true;
+                    break;
+                }
 			}
 			if (!hasDoublette) {
 				return transitionId;
@@ -93,9 +94,10 @@ public class PetrinetBuilder extends Controller implements IPBuilderToolbarListe
 			String fieldId = ("p" + counter);
 			boolean hasDoublette = false;
 			for (PField f : model.getFieldList()) {
-				if (f.getId().equals(fieldId)) {
-					hasDoublette = true;
-				}
+                if (f.getId().equals(fieldId)) {
+                    hasDoublette = true;
+                    break;
+                }
 			}
 			if (!hasDoublette) {
 				return fieldId;
@@ -112,9 +114,10 @@ public class PetrinetBuilder extends Controller implements IPBuilderToolbarListe
 			String edgeId = ("e" + counter);
 			boolean hasDoublette = false;
 			for (PEdge e : model.getEdgeList()) {
-				if (e.getId().equals(edgeId)) {
-					hasDoublette = true;
-				}
+                if (e.getId().equals(edgeId)) {
+                    hasDoublette = true;
+                    break;
+                }
 			}
 			if (!hasDoublette) {
 				return edgeId;

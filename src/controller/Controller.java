@@ -16,10 +16,10 @@ import model.elements.*;
 
 public class Controller implements IModelChanger, IMouseInputListener, IPetrinetToolBarListener {
 	protected IModel model;
-	private List<IViewer> views;
-	private List<ITextWindow> textWindows;
+	private final List<IViewer> views;
+	private final List<ITextWindow> textWindows;
 	private AGBuilder acessabilityGraphBuilder;
-	private List<IModelChanger> modelChangers;
+	private final List<IModelChanger> modelChangers;
 
 	/**
 	 * Konstruktor

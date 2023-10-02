@@ -10,23 +10,23 @@ public interface IPetrinetToolBarListener {
 	/**
 	 * vermindere die Marken auf dem ausgewählten Feld um 1
 	 */
-	public void decraseMarksOfSelectedFieldByOne();
+    void decraseMarksOfSelectedFieldByOne();
 
 	/**
 	 * erhöhe die Marken auf dem ausgewählten Feld um 1
 	 */
-	public void increaseMarksOfSelectedFieldByOne();
+    void increaseMarksOfSelectedFieldByOne();
 
 	/**
 	 * setzt den Zustand des Petrinetzes auf die Ausgangsmarkierung zurück
 	 */
-	public void resetToInitialMarking();
+    void resetToInitialMarking();
 
 	/**
 	 * löscht den Erreichbarkeitsgraphen und setzt das Petrinetz auf die
 	 * Anfangsmarkierung zurück
 	 */
-	public void deleteAccessabilityGraphAndResetToInitialMarking();
+    void deleteAccessabilityGraphAndResetToInitialMarking();
 
 	/**
 	 * Baut einen Erreichberkeitsgraphen und bestimmt ob dieser Beschränkt ist.
@@ -40,16 +40,16 @@ public interface IPetrinetToolBarListener {
 	 * 
 	 * @return ist das Petrinetz unbeschränkt?
 	 */
-	public boolean validateAccessabilityGraph(boolean showInTextWindows, boolean mergeWithExistingGraph);
+    boolean validateAccessabilityGraph(boolean showInTextWindows, boolean mergeWithExistingGraph);
 
 	/**
 	 * löscht den Text in angemeldeten iTextWindows
 	 */
-	public void resetTextFields();
+    void resetTextFields();
 
 	/**
 	 * setzt die Informationen der Unbeschränktheitsprüfung zurück, also M, M', den
 	 * Pfad dazwischen und die information der Unbeschränktheit.
 	 */
-	public void deleteUnlimitationInformation();
+    void deleteUnlimitationInformation();
 }

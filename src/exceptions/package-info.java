@@ -1,5 +1,5 @@
 /**
- * Das Package <tt>exceptions</tt> fasst die Exceptions des Programms zusammen.
+ * Das Package exceptions fasst die Exceptions des Programms zusammen.
  */
 
 package exceptions;

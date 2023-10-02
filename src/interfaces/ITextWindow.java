@@ -12,17 +12,17 @@ public interface ITextWindow {
 	 * 
 	 * @param text der übergebene Text
 	 */
-	public void pushText(String text);
+    void pushText(String text);
 
 	/**
 	 * Setzt den Text eines IText Window auf den übergebenen Text
 	 * 
 	 * @param text der übergebene Text
 	 */
-	public void setTextTo(String text);
+    void setTextTo(String text);
 
 	/**
 	 * Löscht den bereits getzten Text
 	 */
-	public void clear();
+    void clear();
 }

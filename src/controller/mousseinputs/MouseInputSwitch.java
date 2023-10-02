@@ -10,10 +10,10 @@ import interfaces.IModeManager;
  */
 
 public class MouseInputSwitch implements IModeManager {
-	private ToggleableMouseAdapter viewModeMousseAdapter;
-	private ToggleableMouseAdapter buildModeMousseAdapter;
-	private ToggleableGraphClickListener viewModeClickListener;
-	private ToggleableGraphClickListener buildModeClickListener;
+	private final ToggleableMouseAdapter viewModeMousseAdapter;
+	private final ToggleableMouseAdapter buildModeMousseAdapter;
+	private final ToggleableGraphClickListener viewModeClickListener;
+	private final ToggleableGraphClickListener buildModeClickListener;
 	private boolean isInViewMode;
 
 	/**

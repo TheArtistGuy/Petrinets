@@ -13,5 +13,5 @@ public interface IMouseInputListener {
 	 * 
 	 * @param id die Id des anzuwählenden Knotens
 	 */
-	public void selectLabeledNode(String id);
+    void selectLabeledNode(String id);
 }

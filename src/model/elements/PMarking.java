@@ -10,7 +10,7 @@ import java.util.List;
 
 public class PMarking extends PLabeledNode {
 	private int[] markingDistribution;
-	private List<PAccEdge> adjacencyListOfMarkingsFollowing;
+	private final List<PAccEdge> adjacencyListOfMarkingsFollowing;
 
 	/**
 	 * Konstruktor
@@ -28,7 +28,7 @@ public class PMarking extends PLabeledNode {
 		if (fieldList != null) {
 			this.markingDistribution = new int[fieldList.size()];
 			for (int i = 0; i < fieldList.size(); i++) {
-				markingDistribution[i] = (int) fieldList.get(i).getTokens();
+				markingDistribution[i] = fieldList.get(i).getTokens();
 			}
 		}
 	}

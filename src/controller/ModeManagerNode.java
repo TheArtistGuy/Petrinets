@@ -14,7 +14,7 @@ import interfaces.IModeManager;
  *
  */
 public class ModeManagerNode implements IModeManager {
-	private List<IModeManager> modeManagers;
+	private final List<IModeManager> modeManagers;
 
 	/**
 	 * Konstruktor
